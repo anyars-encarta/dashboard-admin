@@ -1,4 +1,16 @@
 import React from 'react';
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
+import StoreIcon from "@mui/icons-material/Store";
+import InsertChartIcon from "@mui/icons-material/InsertChart";
+import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
+import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import './sidebar.scss';
 
 const Sidebar = () => {
@@ -11,17 +23,62 @@ const Sidebar = () => {
 
       <div className="center">
         <ul>
-          <li>
+          <p className="title">MAIN</p>
+          <li className='active'>
+            <DashboardIcon className='icon' />
             <span>Dashboard</span>
           </li>
+
+          <p className="title">LISTS</p>
           <li>
-            <span>Dashboard</span>
+            <PersonOutlineIcon className='icon' />
+            <span>Users</span>
           </li>
           <li>
-            <span>Dashboard</span>
+            <StoreIcon className='icon' />
+            <span>Products</span>
           </li>
           <li>
-            <span>Dashboard</span>
+            <CreditCardIcon className='icon' />
+            <span>Orders</span>
+          </li>
+          <li>
+            <LocalShippingIcon className='icon' />
+            <span>Delivery</span>
+          </li>
+
+          <p className="title">USEFUL</p>
+          <li>
+            <InsertChartIcon className='icon' />
+            <span>Stats</span>
+          </li>
+          <li>
+            <NotificationsNoneIcon className='icon' />
+            <span>Notifications</span>
+          </li>
+
+          <p className="title">SERVICE</p>
+          <li>
+            <SettingsSystemDaydreamOutlinedIcon className='icon' />
+            <span>System Health</span>
+          </li>
+          <li>
+            <PsychologyOutlinedIcon className='icon' />
+            <span>Logs</span>
+          </li>
+          <li>
+            <SettingsApplicationsIcon className='icon' />
+            <span>Settings</span>
+          </li>
+
+          <p className="title">USER</p>
+          <li>
+            <AccountCircleOutlinedIcon className='icon' />
+            <span>Profile</span>
+          </li>
+          <li>
+            <ExitToAppIcon className='icon' />
+            <span>Logout</span>
           </li>
         </ul>
       </div>
