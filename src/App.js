@@ -10,11 +10,22 @@ const App = () => {
     <Router>
       <div className="App">
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/new' element={<New />} />
-          <Route path='/list' element={<List />} />
-          <Route path='/single' element={<Single />} />
+          <Route path='/'>
+            <Route index element={<Home />} />
+            <Route path='/login' element={<Login />} />
+
+            <Route path='users'>
+              <Route index element={<List />} />
+              <Route path=':userId' element={<Single />} />
+              <Route path='new' element={<New />} />
+            </Route>
+
+            <Route path='products'>
+              <Route index element={<List />} />
+              <Route path=':productId' element={<Single />} />
+              <Route path='new' element={<New />} />
+            </Route>
+          </Route>
         </Routes>
       </div>
     </Router>
