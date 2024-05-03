@@ -83,7 +83,11 @@ const Sidebar = () => {
         </ul>
       </div>
 
-      <div className="bottom">Color Options</div>
+      <div className="bottom">
+        <div className="colorOption"></div>
+        <div className="colorOption"></div>
+        {/* <div className="colorOption"></div> */}
+      </div>
     </div>
   )
 }
