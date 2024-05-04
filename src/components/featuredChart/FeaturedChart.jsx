@@ -6,6 +6,8 @@ import { KeyboardArrowDown, KeyboardArrowUpOutlined } from '@mui/icons-material'
 import './featuredChart.scss';
 
 const FeaturedChart = () => {
+  const summaryAmount = 420
+
   return (
     <div className='featuredChart'>
       <div className="top">
@@ -19,7 +21,7 @@ const FeaturedChart = () => {
         </div>
 
         <p className="title">Total Sales made today</p>
-        <p className="amount">$420</p>
+        <p className="amount">${summaryAmount.toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 2 })}</p>
         <p className="desc">Previous transactions processing. Last payments may not be included.</p>
 
         <div className="summary">
