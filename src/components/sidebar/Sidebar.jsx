@@ -12,6 +12,7 @@ import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSyst
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import './sidebar.scss';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
@@ -25,18 +26,24 @@ const Sidebar = () => {
         <ul>
           <p className="title">MAIN</p>
           <li className='active'>
-            <DashboardIcon className='icon' />
-            <span>Dashboard</span>
-          </li>
+            <Link to="/" className='link'>
+              <DashboardIcon className='icon' />
+              <span>Dashboard</span>
+            </Link>
 
+          </li>
           <p className="title">LISTS</p>
           <li>
-            <PersonOutlineIcon className='icon' />
-            <span>Users</span>
+            <Link to="/users" className='link'>
+              <PersonOutlineIcon className='icon' />
+              <span>Users</span>
+            </Link>
           </li>
           <li>
-            <StoreIcon className='icon' />
-            <span>Products</span>
+            <Link to="/products" className='link'>
+              <StoreIcon className='icon' />
+              <span>Products</span>
+            </Link>
           </li>
           <li>
             <CreditCardIcon className='icon' />
