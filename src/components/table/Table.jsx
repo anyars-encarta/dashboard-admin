@@ -1,7 +1,9 @@
 import React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
-import { rows } from '../../constants/tableData';
+import { dashboardRows } from '../../constants/tableData';
 import './table.scss';
+
+const rows = dashboardRows;
 
 const DashboardTable = () => {
     return (
