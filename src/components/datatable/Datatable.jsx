@@ -28,19 +28,20 @@ const columns = [
 const Datatable = () => {
     return (
         <div className='datatable'>
-            <div style={{ height: 400, width: '100%' }}>
+            {/* <div style={{ height: 400, width: '100%' }}> */}
                 <DataGrid
                     rows={rows}
                     columns={columns}
+                    // disableRowSelectionOnClick
                     initialState={{
                         pagination: {
-                            paginationModel: { page: 0, pageSize: 5 },
+                            paginationModel: { page: 0, pageSize: 8 },
                         },
                     }}
                     pageSizeOptions={[5, 10]}
                     checkboxSelection
                 />
-            </div>
+            {/* </div> */}
         </div>
     )
 }
