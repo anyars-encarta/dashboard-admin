@@ -1,6 +1,7 @@
 import React from 'react';
-import Sidebar from '../../components/sidebar/Sidebar'
-import Navbar from '../../components/navbar/Navbar'
+import Sidebar from '../../components/sidebar/Sidebar';
+import Navbar from '../../components/navbar/Navbar';
+import NormalChart from '../../components/normalChart/NormalChart';
 import './single.scss';
 
 const Single = () => {
@@ -39,7 +40,9 @@ const Single = () => {
             </div>
           </div>
 
-          <div className="right"></div>
+          <div className="right">
+            <NormalChart aspect={3 / 1} title='User Spending ( Last 6 Months )' />
+          </div>
         </div>
 
         <div className="bottom"></div>
