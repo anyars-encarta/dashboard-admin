@@ -4,7 +4,7 @@ import Navbar from '../../components/navbar/Navbar';
 import { DriveFolderUploadOutlined } from '@mui/icons-material';
 import './new.scss';
 
-const New = () => {
+const New = ({ inputs, title }) => {
   return (
     <div className='new'>
       <Sidebar />
@@ -13,7 +13,7 @@ const New = () => {
         <Navbar />
 
         <div className="top">
-          <h1>Add New User</h1>
+          <h1>{title}</h1>
         </div>
 
         <div className="bottom">
@@ -26,34 +26,12 @@ const New = () => {
                 <label for="file">Image: <DriveFolderUploadOutlined className='icon' /></label>
                 <input id='file' type="file" style={{ display: 'none'}}/>
               </div>
+              
               <div className="formInput">
                 <label for="username">Username</label>
                 <input id='username' type="text" placeholder='username' />
               </div>
-              <div className="formInput">
-                <label for="name">Name and Surname</label>
-                <input id='name' type="text" placeholder='Name and Surname' />
-              </div>
-              <div className="formInput">
-                <label for="email">Email</label>
-                <input id='email' type="text" placeholder='anything@something.com' />
-              </div>
-              <div className="formInput">
-                <label for="phone">Phone</label>
-                <input id='phone' type="text" placeholder='+1 234 567 890' />
-              </div>
-              <div className="formInput">
-                <label for="password">Passport</label>
-                <input id='password' type="password" />
-              </div>
-              <div className="formInput">
-                <label for="address">Address</label>
-                <input id='address' type="text" placeholder='Address' />
-              </div>
-              <div className="formInput">
-                <label for="country">Country</label>
-                <input id='country' type="text" placeholder='Country' />
-              </div>
+              
               <button>Send</button>
             </form>
           </div>
