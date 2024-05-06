@@ -2,10 +2,10 @@ import React from 'react';
 import Sidebar from '../../components/sidebar/Sidebar';
 import Navbar from '../../components/navbar/Navbar';
 import { DriveFolderUploadOutlined } from '@mui/icons-material';
-import { userInputs, productInputs } from '../../constants/formSource';
+
 import './new.scss';
 
-const New = ({ inputs, title, type }) => {
+const New = ({ inputs, title }) => {
   return (
     <div className='new'>
       <Sidebar />
