@@ -2,9 +2,10 @@ import React from 'react';
 import Sidebar from '../../components/sidebar/Sidebar';
 import Navbar from '../../components/navbar/Navbar';
 import { DriveFolderUploadOutlined } from '@mui/icons-material';
+import { userInputs, productInputs } from '../../constants/formSource';
 import './new.scss';
 
-const New = ({ inputs, title }) => {
+const New = ({ inputs, title, type }) => {
   return (
     <div className='new'>
       <Sidebar />
@@ -24,14 +25,17 @@ const New = ({ inputs, title }) => {
             <form>
               <div className="formInput">
                 <label for="file">Image: <DriveFolderUploadOutlined className='icon' /></label>
-                <input id='file' type="file" style={{ display: 'none'}}/>
+                <input id='file' type="file" style={{ display: 'none' }} />
               </div>
-              
-              <div className="formInput">
-                <label for="username">Username</label>
-                <input id='username' type="text" placeholder='username' />
-              </div>
-              
+
+              {inputs.map(input => (
+                <div className="formInput" key={input.id}>
+                  <label for="username">{input.label}</label>
+                  <input id='username' type={input.type} placeholder={input.placeholder} />
+                </div>
+              ))}
+
+
               <button>Send</button>
             </form>
           </div>
