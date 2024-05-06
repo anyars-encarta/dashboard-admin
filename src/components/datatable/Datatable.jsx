@@ -36,6 +36,7 @@ const Datatable = () => {
             </div>
             {/* <div style={{ height: 400, width: '100%' }}> */}
             <DataGrid
+                className='datagrid'
                 rows={data}
                 columns={userColumns.concat(actionColumn)}
                 disableRowSelectionOnClick
