@@ -1,12 +1,21 @@
 import React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
-import { rows } from '../../constants/tableData';
+import { dashboardRows } from '../../constants/tableData';
 import './table.scss';
+import { Link } from 'react-router-dom';
+
+const rows = dashboardRows;
 
 const DashboardTable = () => {
     return (
         <TableContainer component={Paper} className='tableContainer'>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <div className="datatableTitle">
+                Add New Product
+                <Link to="/products/new" className='link'>
+                    Add New
+                </Link>
+            </div>
+            <Table sx={{ maxWidth: 1100 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
                         <TableCell className='tableCell'>Tracking ID</TableCell>

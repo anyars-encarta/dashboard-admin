@@ -1,4 +1,27 @@
 .tableContainer {
+    padding: 20px;
+
+    .datatableTitle {
+        max-width: 1100px;
+        font-size: 24px;
+        color: gray;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .link {
+            text-decoration: none;
+            color: green;
+            font-size: 16px;
+            font-weight: 400;
+            border: 1px solid green;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+
     .tableCell {
         .cellWrapper {
             display: flex;

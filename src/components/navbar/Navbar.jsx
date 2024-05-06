@@ -9,6 +9,7 @@ import {
   ChatBubbleOutlineOutlined, 
   ListOutlined
 } from '@mui/icons-material';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 const Navbar = () => {
   return (
@@ -49,6 +50,10 @@ const Navbar = () => {
 
           <div className="item">
             <img src="/images/profile.jpg" alt="" className="avatar" />
+          </div>
+
+          <div className="item">
+            <SettingsIcon />
           </div>
         </div>
       </div>
