@@ -1,19 +1,20 @@
 import React, { useContext } from 'react';
 import './navbar.scss';
-import { 
-  LanguageOutlined, 
+import {
+  LanguageOutlined,
   SearchOutlined,
-  DarkModeOutlined, 
-  FullscreenExitOutlined, 
-  NotificationsNoneOutlined, 
-  ChatBubbleOutlineOutlined, 
+  DarkModeOutlined,
+  LightModeOutlined,
+  FullscreenExitOutlined,
+  NotificationsNoneOutlined,
+  ChatBubbleOutlineOutlined,
   ListOutlined
 } from '@mui/icons-material';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { DarkModeContext } from '../../context/darkModeContext';
 
 const Navbar = () => {
-  const { dispatch } = useContext(DarkModeContext);
+  const { darkMode, dispatch } = useContext(DarkModeContext);
 
   return (
     <div className='navbar'>
@@ -30,7 +31,12 @@ const Navbar = () => {
           </div>
 
           <div className="item">
-            <DarkModeOutlined className='icon' onClick={() => dispatch({ type: "TOGGLE"})}/>
+            {darkMode ? (
+              <LightModeOutlined className='icon' onClick={() => dispatch({ type: "TOGGLE" })} />
+            ) : (
+              <DarkModeOutlined className='icon' onClick={() => dispatch({ type: "TOGGLE" })} />
+            )}
+
           </div>
 
           <div className="item">
