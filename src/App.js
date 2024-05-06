@@ -5,6 +5,7 @@ import Login from "./pages/login/Login";
 import New from "./pages/new/New";
 import Single from "./pages/single/Single";
 import { userInputs, productInputs } from "./constants/formSource";
+import './style/dark.scss';
 
 const App = () => {
   return (
