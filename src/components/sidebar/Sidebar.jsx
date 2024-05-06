@@ -1,24 +1,28 @@
 import React from 'react';
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import CreditCardIcon from "@mui/icons-material/CreditCard";
-import StoreIcon from "@mui/icons-material/Store";
-import InsertChartIcon from "@mui/icons-material/InsertChart";
-import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
-import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
-import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import './sidebar.scss';
+import { 
+  Dashboard, 
+  PersonOutline,
+  LocalShipping,
+  CreditCard,
+  Store,
+  InsertChart,
+  SettingsApplications,
+  ExitToApp,
+  NotificationsNone,
+  SettingsSystemDaydreamOutlined,
+  PsychologyOutlined,
+  AccountCircleOutlined
+} from "@mui/icons-material";
 import { Link } from 'react-router-dom';
+import './sidebar.scss';
 
 const Sidebar = () => {
   return (
     <div className='sidebar'>
       <div className="top">
-        <span className="logo">Encarta Admin</span>
+        <Link to="/" className='link'>
+          <span className="logo">Encarta Admin</span>
+        </Link>
       </div>
       <hr />
 
@@ -27,7 +31,7 @@ const Sidebar = () => {
           <p className="title">MAIN</p>
           <li className='active'>
             <Link to="/" className='link'>
-              <DashboardIcon className='icon' />
+              <Dashboard className='icon' />
               <span>Dashboard</span>
             </Link>
 
@@ -35,56 +39,56 @@ const Sidebar = () => {
           <p className="title">LISTS</p>
           <li>
             <Link to="/users" className='link'>
-              <PersonOutlineIcon className='icon' />
+              <PersonOutline className='icon' />
               <span>Users</span>
             </Link>
           </li>
           <li>
             <Link to="/products" className='link'>
-              <StoreIcon className='icon' />
+              <Store className='icon' />
               <span>Products</span>
             </Link>
           </li>
           <li>
-            <CreditCardIcon className='icon' />
+            <CreditCard className='icon' />
             <span>Orders</span>
           </li>
           <li>
-            <LocalShippingIcon className='icon' />
+            <LocalShipping className='icon' />
             <span>Delivery</span>
           </li>
 
           <p className="title">USEFUL</p>
           <li>
-            <InsertChartIcon className='icon' />
+            <InsertChart className='icon' />
             <span>Stats</span>
           </li>
           <li>
-            <NotificationsNoneIcon className='icon' />
+            <NotificationsNone className='icon' />
             <span>Notifications</span>
           </li>
 
           <p className="title">SERVICE</p>
           <li>
-            <SettingsSystemDaydreamOutlinedIcon className='icon' />
+            <SettingsSystemDaydreamOutlined className='icon' />
             <span>System Health</span>
           </li>
           <li>
-            <PsychologyOutlinedIcon className='icon' />
+            <PsychologyOutlined className='icon' />
             <span>Logs</span>
           </li>
           <li>
-            <SettingsApplicationsIcon className='icon' />
+            <SettingsApplications className='icon' />
             <span>Settings</span>
           </li>
 
           <p className="title">USER</p>
           <li>
-            <AccountCircleOutlinedIcon className='icon' />
+            <AccountCircleOutlined className='icon' />
             <span>Profile</span>
           </li>
           <li>
-            <ExitToAppIcon className='icon' />
+            <ExitToApp className='icon' />
             <span>Logout</span>
           </li>
         </ul>
