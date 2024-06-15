@@ -75,7 +75,7 @@
 
 LIVE DEMO
 
-> Visit the [live](https://anyars-admin-panel.vercel.app/) version of the project here.
+> Visit the [live](https://dashboard-admin-anyars.vercel.app/) version of the project here.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
